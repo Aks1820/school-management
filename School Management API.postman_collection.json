@@ -1,0 +1,528 @@
+{
+  "info": {
+    "_postman_id": "87b59b91-4967-4c63-a28d-15f2c7e91ffc",
+    "name": "School Management API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "41988894"
+  },
+  "item": [
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "Register User",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"Akshit Kumar\",\r\n  \"email\": \"admin@gmail.com\",\r\n  \"password\": \"123456\",\r\n  \"role\": \"admin\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://school-management-backend-b2f9.onrender.com/api/auth/register",
+              "protocol": "https",
+              "host": [
+                "school-management-backend-b2f9",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "register"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Login User",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"email\": \"admin@gmail.com\",\r\n  \"password\": \"123456\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://school-management-backend-b2f9.onrender.com/api/auth/login",
+              "protocol": "https",
+              "host": [
+                "school-management-backend-b2f9",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get User Profile",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMDJkZGMyNWE0OTY5NjIxNDBiYjg2NiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3ODU3MjgyNCwiZXhwIjoxNzc5MTc3NjI0fQ.yvZ6tjDVTjyEa8eXOOOGLt-Cf32W6Ok0e4BOJl38Mxw; Path=/; HttpOnly; Expires=Tue, 19 May 2026 08:00:24 GMT;",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"email\": \"admin@gmail.com\",\r\n  \"password\": \"123456\"\r\n}"
+            },
+            "url": {
+              "raw": "https://school-management-backend-b2f9.onrender.com/api/auth/profile",
+              "protocol": "https",
+              "host": [
+                "school-management-backend-b2f9",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "profile"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Students",
+      "item": [
+        {
+          "name": "Create Student",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"vipul Sharma\",\r\n  \"email\": \"vipulsharma@gmail.com\",\r\n  \"phone\": \"9876587210\",\r\n  \"course\": \"Computer Science\",\r\n  \"age\": 21,\r\n  \"gender\": \"male\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://school-management-backend-b2f9.onrender.com/api/students/create",
+              "protocol": "https",
+              "host": [
+                "school-management-backend-b2f9",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "api",
+                "students",
+                "create"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Students",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"Rahul Sharma\",\r\n  \"email\": \"rahulsharma@gmail.com\",\r\n  \"phone\": \"9876543210\",\r\n  \"course\": \"Computer Science\",\r\n  \"age\": 20,\r\n  \"gender\": \"male\"\r\n}"
+            },
+            "url": {
+              "raw": "https://school-management-backend-b2f9.onrender.com/api/students/",
+              "protocol": "https",
+              "host": [
+                "school-management-backend-b2f9",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "api",
+                "students",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Student By ID",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"Rahul Sharma\",\r\n  \"email\": \"rahulsharma@gmail.com\",\r\n  \"phone\": \"9876543210\",\r\n  \"course\": \"Computer Science\",\r\n  \"age\": 20,\r\n  \"gender\": \"male\"\r\n}"
+            },
+            "url": {
+              "raw": "https://school-management-backend-b2f9.onrender.com/api/students/6a02e0965a496962140bb867",
+              "protocol": "https",
+              "host": [
+                "school-management-backend-b2f9",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "api",
+                "students",
+                "6a02e0965a496962140bb867"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Student",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"course\": \"Data Science\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://school-management-backend-b2f9.onrender.com/api/students/6a02e0965a496962140bb867",
+              "protocol": "https",
+              "host": [
+                "school-management-backend-b2f9",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "api",
+                "students",
+                "6a02e0965a496962140bb867"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Student",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"course\": \"Data Science\"\r\n}"
+            },
+            "url": {
+              "raw": "https://school-management-backend-b2f9.onrender.com/api/students/6a02e0965a496962140bb867",
+              "protocol": "https",
+              "host": [
+                "school-management-backend-b2f9",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "api",
+                "students",
+                "6a02e0965a496962140bb867"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Teachers",
+      "item": [
+        {
+          "name": "Create Teacher",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"Anjali Verma\",\r\n  \"email\": \"anjali.verma@example.com\",\r\n  \"subject\": \"Computer Science\",\r\n  \"phone\": \"9876543213\",\r\n  \"gender\": \"female\",\r\n  \"age\": 29\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://school-management-backend-b2f9.onrender.com/api/teachers/create",
+              "protocol": "https",
+              "host": [
+                "school-management-backend-b2f9",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "api",
+                "teachers",
+                "create"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Teachers",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"Anjali Verma\",\r\n  \"email\": \"anjali.verma@example.com\",\r\n  \"subject\": \"Computer Science\",\r\n  \"phone\": \"9876543213\",\r\n  \"gender\": \"female\",\r\n  \"age\": 29\r\n}"
+            },
+            "url": {
+              "raw": "https://school-management-backend-b2f9.onrender.com/api/teachers/",
+              "protocol": "https",
+              "host": [
+                "school-management-backend-b2f9",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "api",
+                "teachers",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Teacher by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://school-management-backend-b2f9.onrender.com/api/teachers/6a02e27e5a496962140bb86a",
+              "protocol": "https",
+              "host": [
+                "school-management-backend-b2f9",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "api",
+                "teachers",
+                "6a02e27e5a496962140bb86a"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Teacher",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"subject\": \"Advanced Mathematics\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://school-management-backend-b2f9.onrender.com/api/teachers/6a02e27e5a496962140bb86a",
+              "protocol": "https",
+              "host": [
+                "school-management-backend-b2f9",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "api",
+                "teachers",
+                "6a02e27e5a496962140bb86a"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Teacher",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"subject\": \"Advanced Mathematics\"\r\n}"
+            },
+            "url": {
+              "raw": "https://school-management-backend-b2f9.onrender.com/api/teachers/6a02e27e5a496962140bb86a",
+              "protocol": "https",
+              "host": [
+                "school-management-backend-b2f9",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "api",
+                "teachers",
+                "6a02e27e5a496962140bb86a"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Attendance",
+      "item": [
+        {
+          "name": "Create Attendance",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"student\":\"6a02e1eb5a496962140bb868\",\r\n    \"teacher\":\"6a02e2865a496962140bb86b\",\r\n    \"date\":\"2026-05-12\",\r\n    \"status\":\"present\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://school-management-backend-b2f9.onrender.com/api/attendance/create",
+              "protocol": "https",
+              "host": [
+                "school-management-backend-b2f9",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "api",
+                "attendance",
+                "create"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Attendance",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"student\":\"6a02e1eb5a496962140bb868\",\r\n    \"teacher\":\"6a02e2865a496962140bb86b\",\r\n    \"date\":\"2026-05-12\",\r\n    \"status\":\"present\"\r\n}"
+            },
+            "url": {
+              "raw": "https://school-management-backend-b2f9.onrender.com/api/attendance",
+              "protocol": "https",
+              "host": [
+                "school-management-backend-b2f9",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "api",
+                "attendance"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Attendance By Student",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"student\":\"6a02e1eb5a496962140bb868\",\r\n    \"teacher\":\"6a02e2865a496962140bb86b\",\r\n    \"date\":\"2026-05-12\",\r\n    \"status\":\"present\"\r\n}"
+            },
+            "url": {
+              "raw": "https://school-management-backend-b2f9.onrender.com/api/attendance/student/6a02e1eb5a496962140bb868",
+              "protocol": "https",
+              "host": [
+                "school-management-backend-b2f9",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "api",
+                "attendance",
+                "student",
+                "6a02e1eb5a496962140bb868"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Attendance Percentage",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://school-management-backend-b2f9.onrender.com/api/attendance/percentage/6a02e1eb5a496962140bb868",
+              "protocol": "https",
+              "host": [
+                "school-management-backend-b2f9",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "api",
+                "attendance",
+                "percentage",
+                "6a02e1eb5a496962140bb868"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
