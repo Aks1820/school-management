@@ -117,6 +117,17 @@ npm run dev
 
 https://school-management-backend-b2f9.onrender.com/
 
+## Postman Collection
+
+The complete Postman API collection is available in the `postman` folder.
+
+---
+
+## Demo Admin Account
+
+Email: admin@gmail.com  
+Password: 123456
+
 ## Author
 
 Akshit Kumar
