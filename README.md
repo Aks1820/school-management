@@ -113,6 +113,10 @@ npm run dev
 
 ---
 
+## Live API
+
+https://school-management-backend-b2f9.onrender.com/
+
 ## Author
 
 Akshit Kumar
